@@ -1,13 +1,16 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>Hello User App</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<p th:text="'Hello, ' + ${name} + '!'" />
-<!--<p th:text="'You are  ' + ${age} + ' years old.'" />-->
-<!--<p th:text="'Your address is   ' + ${address} + '.'" />-->
-<p>Check your information <a href="/user-info">here</a></p>
+<h1>Form</h1>
+<form action="#" th:action="@{/greeting}" th:object="${user}" method="post">
+    <p>Name: <input type="text" th:field="*{name}" /></p>
+    <p>Age : <input type="text" th:field="*{age}" /></p>
+    <p>Address: <input type="text" th:field="*{address}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
 </body>
 </html>

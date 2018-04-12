@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>Hello User</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<p th:text="'You are  ' + ${age} + ' years old.'" />
-<p th:text="'Your address is   ' + ${address} + '.'" />
+    <h1 th:text="'Hello, ' + ${user.name} + '!'" />
+    <h1 th:text="'You are  ' + ${user.age} + ' years old.'" />
+    <h1 th:text="'Your address is   ' + ${user.address} + '.'" />
 </body>
 </html>
